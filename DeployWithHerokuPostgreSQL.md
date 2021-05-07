@@ -200,7 +200,40 @@ dh3ldkfg4dhdi6 --> Nome da base de dados definido pelo Heroku
 
 __5 - Enviar nossa aplicação para o Heroku__
 
+```
+Agora, depois de termos criado o nosso banco de dados no Heroku e conectado-o com o nosso pgAdmin, precisamos enviar a nossa aplicação Java para o Heroku, de forma que a nossa API consiga estar rodando online no Heroku e tendo acesso ao banco de dados online, também criado pelo Heroku.
 
+Passos:
+1 - 'heroku -v' ==> Ver se o Heroku CLI foi instalado com sucesso no nosso computador
+
+2 - 'heroku login' ==> Um navegador irá aparecer para confirmar seu username e password do Heroku
+
+3 - 'heroku git:remote -a <nome do App criado no heroku>' ==> App foi criado no link https://dashboard.heroku.com/apps. Ex: SDS3-Viniciusog
+
+4 - 'git remote -v' ==> Mostra as conexões remotas que podemos fazer com o git. O "git.heroku" irá aparecer entre eles.
+
+5 - 'git subtree push --prefix backend heroku main' ==> "backend" é o nome da nossa pasta do Backend na raiz do projeto (Tem que ser o nome da pasta do backend).
+
+**Agora a nossa aplicação Java estará sendo enviada para o Heroku...**
+
+Depois de carregar muita coisa, se aparecer 'BUILD SUCCESS', então nossa aplicação foi enviada para o Heroku com sucesso!
+```
+
+---
+
+
+
+### 4 - Acessar a nossa aplicação pelo site do Heroku
+
+* Para acessar a nossa API Java pelo Heroku, vá no link:  ```https://dashboard.heroku.com/apps/NOMEDOSEUAPP/settings``` e aperte no botão ```OPEN APP```
+
+* Feito isso, a API será inicializada no Heroku, no link indicado. Quando aparecer a mensagem básica de 'erro' (```Whitelabel Error Page```) do Spring, sabemos que tudo ocorreu da forma certa e como o esperado!
+
+
+
+FIM! :tada: 
+
+ 
 
 
 
