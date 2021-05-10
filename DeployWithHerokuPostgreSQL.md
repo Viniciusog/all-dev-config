@@ -231,7 +231,61 @@ Depois de carregar muita coisa, se aparecer 'BUILD SUCCESS', então nossa aplica
 
 
 
-FIM! :tada: 
+Sua aplicação backend (API) foi hospedada no Heroku com sucesso! :tada: :tada: 
+
+
+
+### 5 - BÔNUS: Conectar nosso frontend React no netlify com o backend no Heroku
+
+
+
+#### 5.1 - Parte no Heroku
+
+* Primeiro, vá no seu Heroku e abra a página da sua API Java. Exemplo de link: ```https://dashboard.heroku.com/apps/sds3-viniciusog```
+* Em seguida, aperte em ```open app``` 
+* Espere a nossa API colocada no Heroku carregar. (Quando a mensagem de erro padrão do Spring aparecer: ```Whitelabel Error Page```, sabemos que deu certo)
+* Copie o link dessa página que tem a mensagem ```Whitelabel Error Page```
+
+#### 5.2 - Parte no Netlify
+
+- Faça login no Netlify
+- Adicione o projeto React no Netlify através do upload da sua pasta ```frontend``` 
+- Vá até a página de overviews, exemplo: ```https://app.netlify.com/teams/usuariolegalmaster/overview``` e procure pelo projeto frontend que você colocou no netlify.
+- Aperte no projeto frontend. Uma nova página será aberta
+- Aperte em ```Site settings``` (Configurações do site)
+- Nas abas laterais da esquerda, clique em ```Build & deploy```
+- Vá até ```Environment -> Environment variables``` e aperte em ```Edit variables```
+- Adicione na mesma linha os seguintes valores: ```key: BACKEND_URL e value: link da api do heroku (Ex: https://sds3-vinicius.herokuapp.com)``` 
+- Aperte em ```save```
+- Pronto! Agora temos a variável BACKEND_URL configurada com sucesso na nossa aplicação React no Netlify!
+
+#### 5.3 - Parte no código React
+
+- Observe se você tem na pasta ```public``` o arquivo ```_redirects``` com o valor: ```/* /index.html 200```. Se não tiver, crie!
+
+- Vá na pasta ```utils ``` e verifique se tem o arquivo ```requests```  com o valor: ```export const BASE_URL = process.env.REACT_APP_BACKEND_URL ?? "http://localhost:8080"``` . Se não tiver, crie!
+
+- Faça o __deploy__ da nossa aplicação React novamente para o Netlify, fazendo o upload da pasta frontend.
+
+  
+
+  ##### :tada: Pronto! Agora temos nosso projeto React hospedado no Netlify que se conecta com a nossa API Java hospedada no Heroku!
+
+  
+
+  :star2: __Explicação__
+
+  __REACT_APP__ = É o que identifica que o Netlify está hospedando nosso projeto React.
+
+  _ 
+
+  __BACKEND_URL__ = É o nome da variável do link do backend criada no Netlify na parte de ```Environment -> Environment variables```
+
+  __process.env.REACT_APP_BACKEND_URL ?? "http://localhost:8080__" = Se temos a variável BACKEND_URL configurada, então```BASE_URL``` recebe ele, se não, atribue ```http://localhost:8080``` como valor para ```BASE_URL```
+
+  
+
+
 
  
 
