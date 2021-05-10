@@ -132,7 +132,7 @@ Pronto!
 
 __1 - Criar app no Heroku__
 
-```
+```tex
 Após ter criado a conta no heroku vá para: https://dashboard.heroku.com/apps
 * Aperte em: 'New' ==> 'Create new App'
 	- App name: Coloque o nome da aplicação
@@ -143,7 +143,7 @@ Após ter criado a conta no heroku vá para: https://dashboard.heroku.com/apps
 
 __2 - Provisionar banco PostgreSQL__
 
-```
+```tex
 Após ter criado um App, uma nova tela irá aparecer (Personal => NomeAppCriado). 
 * Clique na aba 'Resources'
 	- Em 'Add-ons' busque pela palavra 'PostgreSQL'
@@ -154,7 +154,7 @@ Após ter criado um App, uma nova tela irá aparecer (Personal => NomeAppCriado)
 
 __3 - Definir variável APP_PROFILE=prod__
 
-```
+```tex
 Após ter criado o banco de dados PostgreSQL, observe as abas
 * Clique na aba 'settings'
 	- Procure o botão 'Reveal config vars' e clique nele
@@ -167,7 +167,7 @@ Após ter criado o banco de dados PostgreSQL, observe as abas
 
 __4 - Conectar ao banco via pgAdmin__
 
-```
+```tex
 Ainda na aba 'settings', vá no botão 'reveal config vars' e aperte-o. 
 * Procure a variável DATABASE_URL e copie o valor dela.
 	- Abra um editor de texto e cole o valor da variável DATABASE_URL
@@ -201,7 +201,8 @@ dh3ldkfg4dhdi6 --> Nome da base de dados definido pelo Heroku
 __5 - Enviar nossa aplicação para o Heroku__
 
 ```go
-Agora, depois de termos criado o nosso banco de dados no Heroku e conectado-o com o nosso pgAdmin, precisamos enviar a nossa aplicação Java para o Heroku, <br> de forma que a nossa API consiga estar rodando online no Heroku e tendo acesso ao banco de dados online, também criado pelo Heroku.
+Agora, depois de termos criado o nosso banco de dados no Heroku e conectado-o com o nosso pgAdmin, precisamos enviar a nossa aplicação Java para o Heroku,
+de forma que a nossa API consiga estar rodando online no Heroku e tendo acesso ao banco de dados online, também criado pelo Heroku.
 
 Passos no terminal do git na pasta do backend (Lembrando: Precisa ter Heroku CLI instalado):
 1 - 'heroku -v' ==> Ver se o Heroku CLI foi instalado com sucesso no nosso computador
