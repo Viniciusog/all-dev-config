@@ -200,10 +200,10 @@ dh3ldkfg4dhdi6 --> Nome da base de dados definido pelo Heroku
 
 __5 - Enviar nossa aplicação para o Heroku__
 
-```
-Agora, depois de termos criado o nosso banco de dados no Heroku e conectado-o com o nosso pgAdmin, precisamos enviar a nossa aplicação Java para o Heroku, de forma que a nossa API consiga estar rodando online no Heroku e tendo acesso ao banco de dados online, também criado pelo Heroku.
+```go
+Agora, depois de termos criado o nosso banco de dados no Heroku e conectado-o com o nosso pgAdmin, precisamos enviar a nossa aplicação Java para o Heroku, <br> de forma que a nossa API consiga estar rodando online no Heroku e tendo acesso ao banco de dados online, também criado pelo Heroku.
 
-Passos:
+Passos no terminal do git na pasta do backend (Lembrando: Precisa ter Heroku CLI instalado):
 1 - 'heroku -v' ==> Ver se o Heroku CLI foi instalado com sucesso no nosso computador
 
 2 - 'heroku login' ==> Um navegador irá aparecer para confirmar seu username e password do Heroku
