@@ -253,22 +253,49 @@ Sua aplicação backend (API) foi hospedada no Heroku com sucesso! :tada: :tada:
 
 - Adicione o projeto React no Netlify através do upload da sua pasta ```frontend```. 
 
-  ```Ou então:  Caso você queira conectar diretamente ao GitHub, de forma que o Netlify faça o deploy automático a cada commit, tem como. O Netlify consegue acessar também repositórios privados, o que facilita bastante. Basta que na hora de criar o nosso projeto no Netlify nós escolhemos via GitHub. Se não quer, apenas siga para o próximo passo.``` 
+  ```Ou então:  Caso você queira conectar diretamente ao GitHub, de forma que o Netlify faça o deploy automático a cada commit, tem como. O Netlify consegue acessar também repositórios privados, o que facilita bastante. Basta que na hora de criar o nosso projeto no Netlify nós escolhemos via GitHub. ```
+
+  __Se você quiser conectar o Netlify com o GitHub:__ 
+
+  * Aperte em 'Create a new site'
+
+  * Vá em: Connect to Git provider e conecte com o seu GitHub
+
+  * Pick a repository (Selecione um repositório no Git, pode ser privado também)
+
+  * Site settings, and deploy! (Adicione os comandos de build)
+
+    * Build command: ``yarn build`` (Pois estamos usando yarn)
+    * Publish directory: ``build`` 
+    * Aperte para fazer o build da sua aplicação (Obs, nesse momento dará erro, mas não se preocupe, apenas siga as próximas instruções)
+
+  * Depois, vá em ``Build & Deploy`` => ``Continuous Deployment`` => ``Build settings`` e coloque ``Base directory`` como sendo a pasta aonde o seu __frontend__ está. Deixe da seguinte forma: 
+
+    __Repository:__ github.com/usuariolegal/ds-sales
+
+    __Base directory:__ frontend     => Pasta onde o meu 
+
+    __Build command:__ yarn build
+
+    __Publish directory:__ frontend/build
+
+    __Builds:__ Active
+
+  * Salve e faça o deploy novamente do projeto React no Netlify. (Aperte em ``Deploy site``)
+
+  __```Se não quer usar o GitHub, ignore os passos do GitHub e apenas siga para o próximo passo.``` __ 
+
+  ------
+
+  
 
 - Vá até a página de overviews, exemplo: ```https://app.netlify.com/teams/usuariolegalmaster/overview``` e procure pelo projeto frontend que você colocou no netlify.
-
 - Aperte no projeto frontend. Uma nova página será aberta
-
 - Aperte em ```Site settings``` (Configurações do site)
-
 - Nas abas laterais da esquerda, clique em ```Build & deploy```
-
 - Vá até ```Environment -> Environment variables``` e aperte em ```Edit variables```
-
 - Adicione na mesma linha os seguintes valores: ```key: BACKEND_URL e value: link da api do heroku (Ex: https://sds3-vinicius.herokuapp.com)``` 
-
 - Aperte em ```save```
-
 - Pronto! Agora temos a variável BACKEND_URL configurada com sucesso na nossa aplicação React no Netlify!
 
 #### 5.3 - Parte no código React
