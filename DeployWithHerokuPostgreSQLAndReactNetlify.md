@@ -294,7 +294,7 @@ Sua aplicação backend (API) foi hospedada no Heroku com sucesso! :tada: :tada:
 - Aperte em ```Site settings``` (Configurações do site)
 - Nas abas laterais da esquerda, clique em ```Build & deploy```
 - Vá até ```Environment -> Environment variables``` e aperte em ```Edit variables```
-- Adicione na mesma linha os seguintes valores: ```key: BACKEND_URL e value: link da api do heroku (Ex: https://sds3-vinicius.herokuapp.com)``` 
+- Adicione na mesma linha os seguintes valores: ```key: REACT_APP_BACKEND_URL e value: link da api do heroku (Ex: https://sds3-vinicius.herokuapp.com)``` 
 - Aperte em ```save```
 - Pronto! Agora temos a variável BACKEND_URL configurada com sucesso na nossa aplicação React no Netlify!
 
